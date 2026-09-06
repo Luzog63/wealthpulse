@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0a0c12" />
+  <meta name="description" content="WealthPulse — budget, voyages, Flying Blue & objectifs. Dark premium." />
+  <title>WealthPulse</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💎</text></svg>" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="side-nav" aria-label="Navigation principale">
+      <div class="brand">
+        <span class="brand-mark">◈</span>
+        <div>
+          <strong>WealthPulse</strong>
+          <span class="brand-sub">Finance · Voyages</span>
+        </div>
+      </div>
+      <nav class="nav-links" id="side-nav-links"></nav>
+      <div class="side-footer">
+        <div class="net-pill" id="side-net">—</div>
+        <p class="muted tiny">Données locales · EUR</p>
+      </div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow" id="page-eyebrow">Tableau de bord</p>
+          <h1 id="page-title">Accueil</h1>
+        </div>
+        <div class="topbar-actions">
+          <button type="button" class="btn ghost" id="btn-theme-pulse" title="Actualiser">↻</button>
+          <div class="avatar" title="Profil démo">LZ</div>
+        </div>
+      </header>
+      <div id="view" class="view"></div>
+    </main>
+    <nav class="bottom-nav" id="bottom-nav" aria-label="Navigation mobile"></nav>
+  </div>
+  <div id="modal-root" class="modal-root" hidden></div>
+  <div id="toast" class="toast" hidden></div>
+  <script src="js/charts.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/gz-store-a.js"></script>
+  <script src="js/gz-store-b.js"></script>
+  <script src="js/gz-voyages.js"></script>
+  <script src="js/gz-app-a.js"></script>
+  <script src="js/gz-app-b.js"></script>
+  <script src="js/bundle.js"></script>
+</body>
+</html>

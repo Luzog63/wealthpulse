@@ -4,7 +4,7 @@
 (async()=>{
   try{
     const parts=[];
-    for (const u of ["p0.b64","p1.b64","p2.b64","p3.b64","p4.b64","p5.b64"]) parts.push(await (await fetch(u)).text());
+    for (const u of ["p0a.b64", "p0b.b64", "p1a.b64", "p1b.b64", "p2a.b64", "p2b.b64", "p3a.b64", "p3b.b64", "p4a.b64", "p4b.b64", "p5.b64"]) parts.push(await (await fetch(u)).text());
     const bin=Uint8Array.from(atob(parts.join("").trim()),c=>c.charCodeAt(0));
     const html=await new Response(new Blob([bin]).stream().pipeThrough(new DecompressionStream("gzip"))).text();
     document.open(); document.write(html); document.close();
